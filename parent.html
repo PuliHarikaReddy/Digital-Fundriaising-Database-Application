@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+.mainheading {
+  text-align: center;
+  color: #191970;
+}
+.body {
+background-color: #B6D0E2;
+}
+.border{
+text-align: left;
+color: #0047AB;
+margin: 20px 200px 100px 100px;
+}
+.tableheader{
+text-align: left;
+color: #0047AB;
+}
+.table{
+text-align: left;
+color: #0047AB;
+}
+</style>
+
+</head>
+    <body class="body">
+
+         <h1 class="mainheading"> Parents Giving Form </h1>
+
+        <div class = "border">
+        <form action="/action_page.php">
+            <label for="tid">Transaction ID:</label>
+            <input type="text" id="id" name="tid" required><br><br>
+            <label for="tdate">Transaction Date:</label>
+            <input type="text" id="date" name="tdate" required> <br><br>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js" type="text/javascript"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"
+                type="text/javascript"></script>
+            <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css"
+                rel="Stylesheet" type="text/css" />
+            <script type="text/javascript">
+                $(function () {
+                    $("#date").datepicker({
+                        showOn: 'button',
+                        buttonImageOnly: true,
+                        buttonImage: 'images/calendar.gif',
+                        dateFormat: 'dd-M-yy'
+                    });
+                });
+            </script>
+
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" required><br><br>
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" required><br><br>
+            <label for="parentid">Parent ID:</label>
+            <input type="text" id="pid" name="parentid" required><br><br>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required><br><br>
+            <label for="mobile">Mobile:</label>
+            <input type="number" id="mobile" name="mobile" required><br><br>
+
+            <h2 class="tableheader">Campaigns Information</h2>
+
+                <table  border="2" width="100%" class = "table">
+                <tr>
+                    <th >Campaign ID</th>
+                    <th>Campaign Name</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>C01</td>
+                    <td>Graduate Student Hardship Fund</td>
+                    <td>This fund supports graduate students who are in need</td>
+                </tr>
+                <tr>
+                    <td>C02</td>
+                    <td>1842 Day</td>
+                    <td>Villanova's Annual Day of Giving</td>
+                </tr>
+                <tr>
+                    <td>C03</td>
+                    <td>CLAS Research Fund</td>
+                    <td>Fund for enhancing research opportunites in CLAS</td>
+                </tr>
+                <tr>
+                    <td>C04</td>
+                    <td>Database Project Fund</td>
+                    <td>Helps students building database projects as a part of coursework</td>
+                </tr>
+                <tr>
+                    <td>C05</td>
+                    <td>Falvey Renovation Fund</td>
+                    <td>Fund for renovating Falvey Memorial Library</td>
+                </tr>
+                <tr>
+                    <td>C06</td>
+                    <td>Student Scholarship Fund</td>
+                    <td>Fund to support top performing students with Scholarships</td>
+                </tr>
+                <tr>
+                    <td>C07</td>
+                    <td>Wildcats Athletics Fund</td>
+                    <td>Fund to support Villanova's prestegious Athletics Team</td>
+                </tr>
+                <tr>
+                    <td>C08</td>
+                    <td>VISO Fund</td>
+                    <td>This is to support Villanova International Student Organization</td>
+                </tr>
+                <tr>
+                    <td>C09</td>
+                    <td>University Advancement</td>
+                    <td>This fund is used for areas of need across university</td>
+                </tr>
+                <tr>
+                    <td>C10</td>
+                    <td>Mendell Renovation Fund</td>
+                    <td>This is to support Mendall Science Center renovation</td>
+                </tr>
+                </table>
+                <br><br>
+
+                <label for="cars">Choose a campaign you wish to donate:</label>
+
+                    <select id="campid" required>
+                    <option value="None" selected>None Selected</option>
+                    <option value="C01">C01</option>
+                    <option value="C02">C02</option>
+                    <option value="C03">C03</option>
+                    <option value="C04">C04</option>
+                    <option value="C05">C05</option>
+                    <option value="C06">C06</option>
+                    <option value="C07">C07</option>
+                    <option value="C08">C08</option>
+                    <option value="C09">C09</option>
+                    <option value="C10">C10</option>
+                    </select> <br><br>
+
+                <label for="cars">Choose the campaign name of above campaign ID:</label>
+
+                    
+
+                    <select id="campname" required>
+                    <option value="Noname" selected>None Selected</option>
+                    <option value="C01Name">Graduate Student Hardship Fund</option>
+                    <option value="C02Name">1842 Day</option>
+                    <option value="C03Name">CLAS Research Fund</option>
+                    <option value="C04Name">Database Project Fund</option>
+                    <option value="C05Name">Falvey Renovation Fund</option>
+                    <option value="C06Name">Student Scholarship Fund</option>
+                    <option value="C07Name">Wildcats Athletics Fund</option>
+                    <option value="C08Name">VISO Fund</option>
+                    <option value="C0Name">University Advancement</option>
+                    <option value="C10Name">Mendell Renovation Fund</option>
+                    </select> <br><br>
+
+            <label for="amount">Amount:</label>
+            <input type="number" id="amt" name="amount" required><br><br>
+
+
+            <label for="payment" required>Choose the payment type:</label><br><br>
+            <input type="radio" id="cc" name="creditcard" value="creditcard">
+            <label for="creditcard"> Credit creditcard</label><br>
+            <input type="radio" id="applepay" name="applepay" value="applepay">
+            <label for="applepay">Apple Pay</label><br>
+            <input type="radio" id="cash" name="cash" value="cash">
+            <label for="cash">Cash</label><br><br>
+
+
+
+
+            <!student id, email, mobile, dept, camp id, camp name, amount, pay type>
+
+
+            <input type="submit" value="Submit">
+        </form>
+
+        </div>
+    </body>
+</html>
+
